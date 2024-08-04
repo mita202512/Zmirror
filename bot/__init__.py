@@ -1316,4 +1316,4 @@ async def get_nzb_options():
     nzb_options = (await sabnzbd_client.get_config())["config"]["misc"]
 
 
-bot_loop.run_until_complete(get_nzb_options())
+#bot_loop.run_until_complete(get_nzb_options())
