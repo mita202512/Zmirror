@@ -41,7 +41,6 @@ from bot.helper.task_utils.download_utils.direct_link_generator import (
 )
 from bot.helper.task_utils.download_utils.gd_download import add_gd_download
 from bot.helper.task_utils.download_utils.jd_download import add_jd_download
-from bot.helper.task_utils.download_utils.mega_download import add_mega_download
 from bot.helper.task_utils.download_utils.qbit_download import add_qb_torrent
 from bot.helper.task_utils.download_utils.nzb_downloader import add_nzb
 from bot.helper.task_utils.download_utils.rclone_download import (
@@ -510,11 +509,6 @@ class Mirror(TaskListener):
             await add_gd_download(
                 self,
                 path
-            )
-        elif is_mega_link(self.link):
-            await add_mega_download(
-                self,
-                f"{path}/"
             )
         else:
             ussr = args["-au"]
