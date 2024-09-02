@@ -260,7 +260,7 @@ async def get_readable_message(
         else:
             msg += (
                 f"```\n#Zee{index + start_position}: "
-                f"{escape(f"{task.name()}")}\n```"
+                f"{escape(f'{task.name()}')}\n```"
             )
         if tstatus not in [
             MirrorStatus.STATUS_SEEDING,
